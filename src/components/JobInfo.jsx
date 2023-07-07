@@ -1,7 +1,9 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import Duties from './Duties';
 
-const JobInfo = ({ job }) => {
-  const { title, dates, duties, company } = job;
+const JobInfo = ({ currentItem }) => {
+  const { title, company, dates, duties } = currentItem;
 
   return (
     <article>
@@ -9,8 +11,8 @@ const JobInfo = ({ job }) => {
       <span>{company}</span>
       <p>{dates}</p>
       <ul>
-        {duties.map((duty, index) => {
-          return <Duties key={index} duty={duty} />;
+        {duties.map((duty) => {
+          return <Duties key={uuidv4()} duty={duty} />;
         })}
       </ul>
     </article>

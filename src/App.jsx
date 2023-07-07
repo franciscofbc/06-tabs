@@ -1,29 +1,33 @@
 import { useEffect, useState } from 'react';
+
 import Loading from './components/Loading';
 import JobInfo from './components/JobInfo';
+import BtnContainer from './components/BtnContainer';
 
 const url = 'https://course-api.com/react-tabs-project';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [jobs, setJobs] = useState([]);
+  const [currentItem, setCurrentItem] = useState({});
 
   const fetchData = async () => {
     try {
       const res = await fetch(url);
       const data = await res.json();
       setJobs(data);
+
+      setCurrentItem(data[0]);
+
       setIsLoading(false);
     } catch (error) {
-      setIsLoading(false);
       console.log(error);
+      setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    // setTimeout(() => {
     fetchData();
-    // }, 2000);
   }, []);
 
   if (isLoading) {
@@ -39,7 +43,12 @@ const App = () => {
   return (
     <main>
       <section>
-        <JobInfo key={jobs[0].id} job={jobs[0]} />
+        <BtnContainer
+          jobs={jobs}
+          currentItem={currentItem}
+          setCurrentItem={setCurrentItem}
+        />
+        <JobInfo currentItem={currentItem} />
       </section>
     </main>
   );

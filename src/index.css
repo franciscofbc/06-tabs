@@ -254,3 +254,37 @@ ul {
   margin-top: 1rem;
 }
 /* ============= PROJECT CSS =============== */
+
+main {
+  max-width: var(--max-width);
+  width: var(--fluid-width);
+  margin: 4rem auto;
+}
+
+menu {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+menu .btn {
+  margin: 0.5rem 0.25rem;
+  padding: 0;
+  padding-bottom: 0.25rem;
+  background: transparent;
+  color: var(--black);
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+}
+
+menu .btn:hover {
+  background: transparent;
+  color: var(--primary-500);
+  box-shadow: none;
+  border-bottom: 2px solid var(--primary-500);
+}
+
+/* menu .btn:focus {
+  color: var(--primary-500);
+  border-bottom: 2px solid var(--primary-500);
+} */
