@@ -337,8 +337,19 @@ article ul li p {
   }
 
   menu {
-    margin-right: 6rem;
     display: flex;
     flex-direction: column;
+    margin-right: 4rem;
+  }
+
+  menu .btn {
+    border-left: 2px solid transparent;
+    border-bottom: transparent;
+    padding: 0 4.5rem;
+    margin-bottom: 1.5rem;
+  }
+  menu .btn:hover {
+    border-left: 2px solid var(--primary-500);
+    border-bottom: transparent;
   }
 }
