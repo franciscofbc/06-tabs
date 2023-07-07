@@ -9,7 +9,7 @@ const JobInfo = ({ currentItem }) => {
     <article>
       <h1>{title}</h1>
       <span>{company}</span>
-      <p>{dates}</p>
+      <p className="date">{dates}</p>
       <ul>
         {duties.map((duty) => {
           return <Duties key={uuidv4()} duty={duty} />;

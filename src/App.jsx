@@ -42,7 +42,7 @@ const App = () => {
 
   return (
     <main>
-      <section>
+      <section className="container">
         <BtnContainer
           jobs={jobs}
           currentItem={currentItem}
