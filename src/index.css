@@ -274,19 +274,16 @@ menu .btn {
   color: var(--black);
   box-shadow: none;
   border-radius: 0;
-  border-bottom: 2px solid transparent;
 }
 
 menu .btn:hover {
   background: transparent;
   color: var(--primary-500);
-  box-shadow: none;
-  border-bottom: 2px solid var(--primary-500);
+  box-shadow: 0 2px var(--primary-500);
 }
 
 menu .btn-active {
   color: var(--primary-500);
-  border-bottom: 2px solid var(--primary-500);
 }
 
 article h1 {
@@ -344,18 +341,16 @@ article ul li p {
   }
 
   menu .btn {
-    border-left: 2px solid transparent;
-    border-bottom: transparent;
     padding: 0 4.5rem;
     margin-bottom: 1.5rem;
   }
 
   menu .btn:hover {
-    border-left: 2px solid var(--primary-500);
+    box-shadow: -2px 0 var(--primary-500);
     border-bottom: transparent;
   }
 
   menu .btn-active {
-    border-left: 2px solid var(--primary-500);
+    box-shadow: -2px 0 var(--primary-500);
   }
 }
