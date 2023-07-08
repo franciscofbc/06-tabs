@@ -8,7 +8,9 @@ const BtnContainer = ({ jobs, currentItem, setCurrentItem }) => {
           onClick={() => {
             setCurrentItem(job);
           }}
-          className="btn"
+          className={
+            currentItem.company === job.company ? 'btn btn-active' : 'btn'
+          }
         >
           {job.company}
         </button>
